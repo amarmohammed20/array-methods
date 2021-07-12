@@ -18,9 +18,53 @@
     <main>
         <section>
             <h1>Array Methods - Whats It All About</h1>
+            <p>We will be looking the following meathods that work with Arrays, a very useful skill as a Javascript developer.
+                <br>The guide we will be using can be found <a href="https://github.com/jamesqquick/javascript-array-functions-practice" target="_blank">HERE</a>, also giving you access to sample data.
+                <br>So below are the different methods that will be covered:
+                <ul>
+                    <li>Map</li>
+                    <li>Reduce</li>
+                    <li>Filter</li>
+                    <li>Sort</li>
+                    <li>Every</li>
+                    <li>Some</li>
+                </ul>
+            </p>
+
+            <p>All the workings will be done in the app.js file but I will provide an explination to each method below</p>
+        </section>
+
+        <section>
+            <h2>Map Method</h2>
+            <p>What is the map method</p>
+        </section>
+
+        <section>
+            <h2>Filter Method</h2>
+            <p>The filter method is great, if you would like to find something in an array based on a condition. Simply add .filter to the end of the array and you can use a simple call back function to stipulate the condition you want to use when filtering. The filter method returns back all in the array that meets the condition, an array is returned no just the value.</p>
+            <p>You can pass three paramters into the filter method, below is each paramter with a short explination</p>
+            <ul>
+                <li>*Required* - Value - This is each value in the array that you are filtering on</li>
+                <li>*Optional* - Index -  The array index of the current element</li>
+                <li>*Optional* - arr - The array object the current element belongs to</li>
+            </ul>
+            <img src="" alt="">
+
+            <section>
+                <h2>Reduce Method</h2>
+                <p>The reduce method is great, if you would like to find the total of something in an array. Simply add .reduce to the end of the array and you will pass in the accumulator and the current value as paramters. The accumulator could start by being 0 and you can set this value right after the call back function. Eventually creating a final sum which would be the returned accumulator.</p>
+                <p>You can pass four paramters into the filter method, below is each paramter with a short explination</p>
+                <ul>
+                    <li>*Optional* - Accumulator - The accumulator is the value that we end with. We start with a value and build on it to get a final value</li>
+                    <li>*Required* - Value - This is each value in the array that you are filtering on</li>
+                    <li>*Optional* - Index -  The array index of the current element</li>
+                    <li>*Optional* - arr - The array object the current element belongs to</li>
+                </ul>
+                <img src="" alt="">
+            </section>
+    
         </section>
     </main>
-    
 
     <script src="./app.js"></script>
 </body>
