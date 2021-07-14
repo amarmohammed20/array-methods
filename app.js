@@ -79,15 +79,51 @@ const totalCharactersByEyeColour = data.reduce((acc, char) => {
     return acc
 }, {})
 
-// The reduce method - Get total number of characters in all the characters names
+// The reduce method - Get total number of characters in all the characters names.
+// This task you simply start the accumulator with 0 and get the length of each name and add it to the accumulator.
 const totalCharactersAllCharNames = data.reduce((acc, char) => {
-    const characters = char.name;
-    acc[characters] = acc[characters].length
-    console.log()
-}, {})
+   return acc + char.name.length
+}, 0)
 
 
 // ***** JS REDUCE METHOD END******
 
+// ***** JS MAP METHOD START ******
 
-console.log(totalCharactersByEyeColour)
+// Get array of all names
+const charNames = data.map((char => char.name)) 
+
+// Get array of all heights
+const charHeights = data.map((char => char.height)) 
+
+// Get array of objects with just name and height properties
+// This was a little tricky as the object had to be wrapped in brackets as it was the return. Originally there was no open bracket before the last curly bracket on line 101, this didnt work. 
+const objectNameAndHeight = data.map((char => ({ 
+    name: char.name, height: char.height})
+    )); 
+
+// Get array of all first names
+//Ensure to select 0 index in the new resulting array. 
+// I tried the second parameter as 1 in the split but that brought back a new array for each name. 
+const charFirstNames = data.map((char => char.name.split(" ")[0])) 
+
+// ***** JS MAP METHOD END ******
+
+// ***** JS SOME METHOD START ******
+
+// Is there at least one male character
+const maleChar = data.some(char => char.gender == "male" )
+
+//Is there at least one character with blue eyes
+const eyeColourBlue = data.some(char => char.eye_color == "blue" )
+
+//Is there at least one character taller than 200
+const charTallerThan200 = data.some(char => char.height > "200" )
+
+//Is there at least one character that has a mass less than 50
+const charLessThan50 = data.some(char => char.mass < "50" )
+
+// ***** JS SOME METHOD END ******
+
+
+console.log(charLessThan50)
