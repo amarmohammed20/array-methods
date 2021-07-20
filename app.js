@@ -125,5 +125,53 @@ const charLessThan50 = data.some(char => char.mass < "50" )
 
 // ***** JS SOME METHOD END ******
 
+// ***** JS SORT METHOD START ******
+// Sort by mass - The paramters we pass in are used in the compare function which is used to determine which vaue is greater.
+// So this would be a being Luke Skywalker and b being Anakin Skywalker. We say compare the mass or each one and return the lowest one.
+const sortByMass = data.sort((a,b) => {
+    return a.mass - b.mass;
+});
 
-console.log(charLessThan50)
+//Sort by weight
+const sortByHeight = data.sort((a,b) => {
+    return a.height - b.height;
+})
+
+//Sort by name
+//This example is a little different as its not numbers its a string. We have to compare the two string and assign a positive of negative value.
+const sortByName = data.sort((a,b) => {
+    if(a.name < b.name) {
+        return -1
+    } else {
+        return 1
+    }
+})
+
+//Sort bt gender
+//As gender is the same as name we take the same approach as above. We give each paramter a value to determine a position. 
+const sortByGender = data.sort((a,b) => {
+    if(a.gender < b.gender) {
+        return 1
+    } else {
+        return -1
+    }
+})
+// ***** JS SORT METHOD END ******
+
+// ***** JS EVERY METHOD START ******
+//Does every charector have blue eyes?
+//Nice and simple but found that === compare didnt seem to work.
+const charBlueEyes = data.every(char => char.eye_color == "blue");
+
+//Does every charector weight more than 40?
+//Found that even though the data has mass as a string I had to specify a intiger in the call back logic. 
+const charWeight40 = data.every(char => char.mass > 40);
+
+//Is every charecter shorter than 200?
+const charShort200 = data.every(char => char.height < 200);
+
+//Is every charecter male
+const charGenderMale = data.every(char => char.gender == "male");
+
+
+console.log(charGenderMale);

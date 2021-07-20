@@ -1,7 +1,41 @@
+body {
+    max-width: 95%;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 40px;
+    text-align: left;
+}
+
 .important-point {
     color: red;
 }
 
 img {
     max-width: 500px;
+}
+
+nav {
+    display: block;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin: 10px;
+    background-color: grey;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+    padding-left: 8px;
+}
+
+.logo {
+    display: inline-flex;
+    padding: 20px;
+}
+
+.section-heading {
+    font-size: 35px;
+    text-decoration: none;
 }

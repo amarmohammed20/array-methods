@@ -5,13 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Array Methods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">    <title>Array Methods</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="">Array Methods</a>
-            <a href="">Contact Me</a>
+            <div>
+                <a href="https://inspiredsolutions.me/" target="_blank" class="logo">Inspired Solutions</a>
+            </div>
+                <a href="#map-method">Map</a>
+                <a href="#reduce-method">Reduce</a>
+                <a href="#filter-method">Filter</a>
+                <a href="#sort-method">Sort</a>
+                <a href="#every-method">Every</a>
+                <a href="#some-method">Some</a>
         </nav>
     </header>
 
@@ -20,22 +29,14 @@
             <h1>Array Methods - Whats It All About</h1>
             <p>We will be looking the following meathods that work with Arrays, a very useful skill as a Javascript developer.
                 <br>The guide we will be using can be found <a href="https://github.com/jamesqquick/javascript-array-functions-practice" target="_blank">HERE</a>, also giving you access to sample data.
-                <br>So below are the different methods that will be covered:
-                <ul>
-                    <li>Map</li>
-                    <li>Reduce</li>
-                    <li>Filter</li>
-                    <li>Sort</li>
-                    <li>Every</li>
-                    <li>Some</li>
-                </ul>
             </p>
 
             <p>All the workings will be done in the app.js file but I will provide an explination to each method below</p>
         </section>
 
         <section>
-            <h2>Map Method</h2>
+            <a href="" name="map-method" class="section-heading">Map Method</a>
+            <p class="important-point">Creates a new array</p>
             <p>The map method is used to loop through an array while manipulating data in that array, <span class="important-point"> resulting in creating a new array.</span> The manipulation is done to each element in the array through the call back function passed into the map function.</p>
             <p>You can pass three paramters into the map method, below is each paramter with a short explination</p>
             <ul>
@@ -47,7 +48,8 @@
         </section>
 
         <section>
-            <h2>Filter Method</h2>
+            <a href="" name="filter-method" class="section-heading">Filter Method</a>
+            <p class="important-point">Creates a new array</p>
             <p>The filter method is great, if you would like to find something in an array based on a condition. Simply add .filter to the end of the array and you can use a simple call back function to stipulate the condition you want to use when filtering. <span class="important-point">The filter method returns back all values that meet the condition specified in a new array. You can also chain on another method on the end of the .filter</span></p>
             <p>You can pass three paramters into the filter method, below is each paramter with a short explination</p>
             <ul>
@@ -59,7 +61,8 @@
         </section>
 
         <section>
-            <h2>Reduce Method</h2>
+            <a href="" name="reduce-method" class="section-heading">Reduce Method</a>
+            <p class="important-point">Creates a new array</p>
             <p>The reduce method is great, if you would like to find the total of something in an array. Simply add .reduce to the end of the array and you will pass in the accumulator and the current value as paramters. <span class="important-point">The accumulator could start by being 0 or a empty array or object and you can set this value right after the call back function. Eventually populating the new returned accumulator.</span></p>
             <p>You can pass four paramters into the filter method, below is each paramter with a short explination</p>
             <ul>
@@ -72,7 +75,7 @@
         </section>
 
         <section>
-            <h2>Some Method</h2>
+            <a href="" name="some-method" class="section-heading">Some Method</a>
             <p>The some method is great, method <span class="important-point">checks if at least one item of the array pass a condition you set in the call back function.</span> The some method executes the function once for each element in the array. Simply add .some to the end of the array and you will pass in a call back function which will be the test each element in the array needs to pass. <span class="important-point">The some method does not execute the function for empty array elements and does not change the original array.</span></p>
             <p>You can pass three paramters into the some method, below is each paramter with a short explination</p>
             <ul>
@@ -84,12 +87,26 @@
         </section>
 
         <section>
-            <h2>Sort Method</h2>
+            <a href="" name="sort-method" class="section-heading">Sort Method</a>
+            <p class="important-point">Overwrites the existing array</p>
             <p>The sort method sorts the elements of an array. The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down). By default, the sort() method sorts the values as strings in alphabetical and ascending order. <span class="important-point">The sort method overwrites the original array.</span> 
             <p>You can pass one paramters into the sort method, below is a short explination</p>
             <ul>
-                <li>*Optional* - compareFunction - A function that defines an alternative sort order. The function should return a negative, zero, or positive value, depending on the arguments.</li>
+                <li>*Optional* - compareFunction - A function that defines an alternative sort order. The function should return a negative, zero, or positive value, depending on the arguments. <span class="important-point"> We pass in two items as paramters and then in the call back function we say which one comes first, known as the compare function</span></li>
                 <li><img src="./images/sort-parameter.png" alt=""></li>
+            </ul>
+            <img src="" alt="">
+        </section>
+
+        <section>
+            <a href="" name="every-method" class="section-heading">Every Method</a>
+            <p class="important-point">Creates a new array</p>
+            <p>The every() method returns true if all elements in an array pass a test (provided as a function). <span class="important-point">The method executes the function once for each element present in the array. If it finds an array element where the function returns a false value, every() returns false (and does not check the remaining values). If no false occur, every() returns true</span> 
+            <p>You can pass one paramters into the sort method, below is a short explination</p>
+            <ul>
+                <li>*Required* - Value - This is each value in the array that you are filtering on</li>
+                <li>*Optional* - Index -  The array index of the current element</li>
+                <li>*Optional* - arr - The array object the current element belongs to</li>
             </ul>
             <img src="" alt="">
         </section>
